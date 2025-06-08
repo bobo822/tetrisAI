@@ -1,0 +1,47 @@
+{
+  "project_name": "DDQN_GA_Tetris_AI",
+  "version": "1.0.0",
+  "description": "\u4f7f\u7528DDQN+GA\u8a13\u7df4\u7684Tetris AI\u5c08\u6848",
+  "server": {
+    "host": "127.0.0.1",
+    "port": 10612
+  },
+  "ddqn": {
+    "input_dim": 24,
+    "n_actions": 5,
+    "hidden_layers": [
+      128,
+      128,
+      64
+    ],
+    "learning_rate": 0.000945799072338818,
+    "gamma": 0.9582531913270523,
+    "epsilon": 0.42364586376103297,
+    "epsilon_min": 0.01,
+    "epsilon_decay": 0.9998305903411226,
+    "batch_size": 32,
+    "replay_buffer_size": 100000,
+    "target_update_frequency": 1000,
+    "update_frequency": 500,
+    "hidden_units": 128
+  },
+  "genetic_algorithm": {
+    "population_size": 20,
+    "generations": 1,
+    "mutation_rate": 0.1,
+    "crossover_rate": 0.8,
+    "elite_ratio": 0.1,
+    "evaluation_episodes": 5
+  },
+  "training": {
+    "total_episodes": 50000,
+    "max_steps_per_episode": 50000,
+    "save_frequency": 100,
+    "log_frequency": 10
+  },
+  "evaluation": {
+    "test_episodes": 10,
+    "record_video": true,
+    "save_csv": true
+  }
+}
